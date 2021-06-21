@@ -1,0 +1,15 @@
+.wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  overflow-x: hidden;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 5% 1fr 5%;
+  }
+}
+
+ngdemo-navbar,
+main {
+  grid-column: 2/3;
+}

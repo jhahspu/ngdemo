@@ -1,0 +1,35 @@
+header {
+  padding: .75rem 0;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    h1.logo {
+      font-size: 1.2rem;
+
+      a {
+        padding: .5rem 0;
+      }
+    }
+
+    .nav {
+      display: flex;
+
+      &-link {
+        padding: .5rem;
+        color: $acc;
+        font-size: .9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1ch;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+          color: $gray;
+        }
+      }
+    }
+  }
+}
