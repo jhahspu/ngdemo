@@ -1,0 +1,30 @@
+@import 'prismjs/themes/prism-okaidia.css';
+@import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+@import 'prismjs/plugins/line-highlight/prism-line-highlight.css';
+
+.md-parser {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 50vh;
+    resize: vertical;
+    font-size: 1rem;
+  }
+
+  ul, ol {
+    li {
+      margin-left: 1rem;
+    }
+  }
+
+  blockquote {
+    font-style: italic;
+  }
+}

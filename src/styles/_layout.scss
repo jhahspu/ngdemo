@@ -1,5 +1,7 @@
 .wrapper {
   width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 10% 1fr 10%;
   overflow-x: hidden;
@@ -12,4 +14,9 @@
 ngdemo-navbar,
 main {
   grid-column: 2/3;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  padding: 1rem 0;
 }

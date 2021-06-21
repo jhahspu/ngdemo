@@ -11,6 +11,13 @@ header {
 
       a {
         padding: .5rem 0;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.23);
+        transition: all .2s ease-in-out;
+
+        &:hover {
+          color: $white;
+          text-shadow: $shadow-acc;
+        }
       }
     }
 
@@ -27,7 +34,9 @@ header {
         transition: all .2s ease-in-out;
 
         &:hover {
-          color: $gray;
+          color: $white;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.23);
+          text-shadow: $shadow-acc;
         }
       }
     }
