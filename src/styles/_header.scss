@@ -2,9 +2,10 @@ header {
   padding: .75rem 0;
 
   nav {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
 
     h1.logo {
       font-size: 1.2rem;
@@ -22,30 +23,99 @@ header {
       }
     }
 
-    .nav {
-      display: flex;
+    
 
-      &-item:not(:last-of-type) {
-        border-right: 1px solid $gray;
+    .menu {
+      padding: 1rem;
+      cursor: pointer;
+
+      .burger-icon { 
+        width: 30px;
+        height: 2px;
+        background: $black;
+        position: relative;
+        transition: all .1s ease-in-out;
+        pointer-events: none;
+  
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: $black;
+          transition: all .2s ease-in-out;
+          pointer-events: none;
+        }
+  
+        &::before { top: -6px }
+        &::after { top: 6px }
       }
 
-      &-link {
-        padding: .5rem;
-        color: $acc;
-        font-size: .9rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.1ch;
-        transition: all .2s ease-in-out;
-
+      &.open {
         
-
-        &:hover {
-          color: $white;
-          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.23);
-          text-shadow: $shadow-acc;
+        .burger-icon {
+          background: rgba(0, 0, 0, 0);
+          
+          &::before {
+            top: 0;
+            transform: rotate(45deg);
+          }
+          &::after {
+            top: 0;
+            transform: rotate(-45deg);
+          }
         }
       }
+
+      &:hover:not(.open) {
+        .burger-icon {
+          background-color: $acc;
+
+          &::before,
+          &::after {
+            background-color: $acc;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  position: fixed;
+  top: 80px;
+  right: 10%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: $gray;
+  transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  pointer-events: all;
+  z-index: 98;
+
+  &.closed {
+    opacity: 0;
+    right: -9%;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  &-link {
+    display: block;
+    padding: .5rem;
+    color: $white;
+    font-size: .9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1ch;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      color: $light-gray;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.23);
+      text-shadow: $shadow-acc;
     }
   }
 }

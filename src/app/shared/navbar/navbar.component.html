@@ -9,26 +9,33 @@
       </a>
     </h1>
 
-    <ul class="nav">
+    <div
+      (click)="toggleMenu()"
+      class="menu" >
+        <div class="burger-icon" ></div>
+    </div>
 
-      <li class="nav-item">
-        <a
-          routerLink="/md-parser"
-          class="nav-link" >
-            MD Parser
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a
-          routerLink="/infinite-scroller"
-          class="nav-link" >
-            Infinite Scroller
-        </a>
-      </li>
-
-    </ul>
 
   </nav>
 
 </header>
+
+<ul class="nav closed">
+
+  <li class="nav-item">
+    <a
+      routerLink="/md-parser"
+      class="nav-link" >
+        MD Parser
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a
+      routerLink="/infinite-scroller"
+      class="nav-link" >
+        Infinite Scroller
+    </a>
+  </li>
+
+</ul>
