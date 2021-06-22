@@ -7,7 +7,7 @@ import {
 } from '@angular/common/http';
 import { LoaderService } from '../shared/loader.service';
 import { Observable } from 'rxjs';
-import { finalize } from 'rxjs/operators';
+import { delay, finalize } from 'rxjs/operators';
 
 @Injectable()
 export class NetworkInterceptor implements HttpInterceptor {
@@ -21,9 +21,8 @@ export class NetworkInterceptor implements HttpInterceptor {
     next: HttpHandler): Observable<HttpEvent<unknown>> {
       this.loader.show();
       return next.handle(request).pipe(
-        finalize(
-          () => this.loader.hide()
-        )
+        delay(500),
+        finalize(() => this.loader.hide())
       );
   }
 }

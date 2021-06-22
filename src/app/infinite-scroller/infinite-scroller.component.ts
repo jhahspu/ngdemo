@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { InfiniteScrollerService } from './infinite-scroller.service';
 import { NewsArticle } from './news.interface';
 import { take } from 'rxjs/operators';
@@ -9,7 +9,7 @@ import { take } from 'rxjs/operators';
   styles: [
   ]
 })
-export class InfiniteScrollerComponent implements OnInit {
+export class InfiniteScrollerComponent implements AfterViewInit {
 
   array: NewsArticle[] = [];
   sum = 100;
@@ -23,16 +23,15 @@ export class InfiniteScrollerComponent implements OnInit {
     private serv: InfiniteScrollerService
   ) { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.getArticles()
   }
 
-  getArticles() {
+  getArticles(): void {
     this.serv.getStories(this.page)
     .pipe(take(1))
     .subscribe(
       (res: NewsArticle[]) => {
-        console.log(res);
         res.forEach(el => {
           this.array.push(el)
         })
