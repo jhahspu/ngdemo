@@ -1,0 +1,43 @@
+
+<section class="infinite-scroller">
+
+  <h1>Infinite Scroller</h1>
+
+  <div class="search-results"
+    infinite-scroll
+    [infiniteScrollDistance]="scrollDistance"
+    [infiniteScrollThrottle]="throttle"
+    (scrolled)="onScrollDown()" >
+
+      <article *ngFor="let i of array">
+
+        <h3>{{ i.title }}</h3>
+
+        <p
+          *ngIf="i.user !== null" >
+          By <span class="user">
+            {{i.user}}
+          </span>
+        </p>
+
+        <p>{{i.domain}} | {{i.time_ago}}</p>
+
+        <a
+          href="{{i.url}}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn" >
+            Read More
+        </a>
+
+        <p class="footer">
+          <span>comments: {{ i.comments_count }}</span> | 
+          <span>points: {{ i.points }}</span>
+        </p>
+
+      </article>
+
+  </div>
+
+</section>
+

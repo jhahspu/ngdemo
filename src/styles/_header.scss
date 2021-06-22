@@ -8,6 +8,7 @@ header {
 
     h1.logo {
       font-size: 1.2rem;
+      letter-spacing: .2ch;
 
       a {
         padding: .5rem 0;
@@ -24,6 +25,10 @@ header {
     .nav {
       display: flex;
 
+      &-item:not(:last-of-type) {
+        border-right: 1px solid $gray;
+      }
+
       &-link {
         padding: .5rem;
         color: $acc;
@@ -32,6 +37,8 @@ header {
         text-transform: uppercase;
         letter-spacing: 0.1ch;
         transition: all .2s ease-in-out;
+
+        
 
         &:hover {
           color: $white;
