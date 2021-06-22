@@ -1,0 +1,15 @@
+.loader {
+  position: fixed;
+  top: 2%;
+  left: 50%;
+  background-color: $acc;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.2);
+  z-index: 999;
+
+  h2 {
+    padding: .6rem 1rem;
+    color: $white;
+  }
+}
