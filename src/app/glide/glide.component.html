@@ -1,0 +1,50 @@
+
+<section class="glide-section">
+
+  <h1>GlideJS / NGX-Glide Demo</h1>
+
+  <ng-container >
+
+    <div class="backdrops">
+
+      <ngx-glide
+        [showArrows]="true"
+        type="slider"
+        [perView]=2
+        focusAt="center"
+        [gap]=20
+        [breakpoints]="{ '768': { perView: 1 }, '1200': { perView: 2 } }" >
+
+        <div>
+          <img
+            src="https://picsum.photos/id/237/840/640"
+            alt="pic1"
+            loading="lazy" >
+        </div>
+        <div>
+          <img
+            src="https://picsum.photos/id/124/840/640"
+            alt="pic2"
+            loading="lazy" >
+        </div>
+        <div>
+          <img
+            src="https://picsum.photos/id/123/840/640"
+            alt="pic3"
+            loading="lazy" >
+        </div>
+        <div>
+          <img
+            src="https://picsum.photos/id/122/840/640"
+            alt="pic4"
+            loading="lazy" >
+        </div>
+      </ngx-glide>
+
+    </div>
+
+  </ng-container>
+
+
+
+</section>

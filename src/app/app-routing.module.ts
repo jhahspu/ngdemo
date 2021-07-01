@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GlideComponent } from './glide/glide.component';
 import { HomeComponent } from './home/home.component';
 import { InfiniteScrollerComponent } from './infinite-scroller/infinite-scroller.component';
 import { MdParserComponent } from './md-parser/md-parser.component';
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: "infinite-scroller",
     component: InfiniteScrollerComponent
+  },
+  {
+    path: "glide",
+    component: GlideComponent
   },
 
   {

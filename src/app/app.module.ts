@@ -12,6 +12,7 @@ import { InfiniteScrollerModule } from './infinite-scroller/infinite-scroller.mo
 import { LoaderComponent } from './shared/loader/loader.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NetworkInterceptor } from './interceptors/network.interceptor';
+import { GlideModule } from './glide/glide.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NetworkInterceptor } from './interceptors/network.interceptor';
     BrowserModule,
     AppRoutingModule,
     MdParserModule,
-    InfiniteScrollerModule
+    InfiniteScrollerModule,
+    GlideModule,
   ],
   providers: [
     {
