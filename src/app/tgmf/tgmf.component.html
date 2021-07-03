@@ -1,0 +1,49 @@
+
+<section>
+
+  <h1>TG Movies Demo Glide</h1>
+
+  <div class="tgmovies">
+
+    <ng-container *ngIf="displayTitles && displayTitles.length">
+
+      <ngx-glide
+        #ngxGlide
+        [perView]="perView" >
+
+        <div
+          *ngFor="let mvg of gMvs; let i = index;">
+
+            <div
+              class="slidee"
+              [ngClass]="{'two': slides === 10, 'four': slides === 5}" >
+
+              <div
+                *ngFor="let mv of mvg"
+                class="mvs" >
+
+                  <div
+                    [style.backgroundImage]="'url(https://www.themoviedb.org/t/p/w300_and_h450_bestv2' + mv.poster_path + ')'"
+                    class="poster" >
+                      <img
+                        src="assets/placeholder.png"
+                        alt="placeholder" >
+                  </div>
+
+                  <div class="details">
+                    <span>
+                      {{mv.title | titlecase}}
+                    </span>
+                  </div>
+              </div>
+
+            </div>
+
+        </div>
+
+      </ngx-glide>
+
+    </ng-container>
+
+  </div>
+</section>

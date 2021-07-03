@@ -13,6 +13,7 @@ import { LoaderComponent } from './shared/loader/loader.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NetworkInterceptor } from './interceptors/network.interceptor';
 import { GlideModule } from './glide/glide.module';
+import { TgmfModule } from './tgmf/tgmf.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { GlideModule } from './glide/glide.module';
     MdParserModule,
     InfiniteScrollerModule,
     GlideModule,
+    TgmfModule
   ],
   providers: [
     {

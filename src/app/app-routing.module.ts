@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { InfiniteScrollerComponent } from './infinite-scroller/infinite-scroller.component';
 import { MdParserComponent } from './md-parser/md-parser.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
+import { TgmfComponent } from './tgmf/tgmf.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: "glide",
     component: GlideComponent
+  },
+  {
+    path: "tgmf",
+    component: TgmfComponent
   },
 
   {
