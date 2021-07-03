@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TGMF } from './tgmf.interface';
 
-const BASE_URL_TGM = `http://tgmback.herokuapp.com`
+const BASE_URL_TGM = `https://tgmback.herokuapp.com`
 
 @Injectable()
 export class TgmfService {
