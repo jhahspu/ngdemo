@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgxGlideComponent } from 'ngx-glide';
 import { take } from 'rxjs/operators';
-import { TGMFD } from '../../tgmf.interface';
+import { TGMF } from '../../tgmf.interface';
 import { TgmfService } from '../../tgmf.service';
 
 @Component({
@@ -12,8 +12,8 @@ import { TgmfService } from '../../tgmf.service';
 })
 export class DscvrComponent {
 
-  dscvrTitles!: TGMFD[];
-  dMvs!: TGMFD[][];
+  dscvrTitles!: TGMF[];
+  dMvs!: TGMF[][];
 
   @ViewChild('ngxGlide') ngxGlide!: NgxGlideComponent;
 
@@ -23,7 +23,7 @@ export class DscvrComponent {
     this.getDscvrTitles();
   }
 
-  private createGroups(arr: TGMFD[], num: number) {
+  private createGroups(arr: TGMF[], num: number) {
     const perGroup = Math.ceil(arr.length / num);
     return new Array(num)
       .fill('')

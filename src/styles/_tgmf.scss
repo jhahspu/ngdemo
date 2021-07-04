@@ -36,14 +36,60 @@
       flex-direction: column;
 
       span {
-        display: inline-block;
-        height: 4rem;
-        font-size: 1.2rem;
-        font-weight: 400;
         white-space: normal;
+        height: 2.2rem;
+        margin: .75rem 0;
+        padding: 0 0.75rem;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
         text-overflow: ellipsis;
+        word-break: break-word;
+        line-height: 1.1rem;
+        font-size: 1rem;
+        font-weight: 400;
         text-align: center;
       }
     }
+  }
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  button, button:active {
+    padding: .5rem;
+    color: $white;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: $boxshadow;
+    border-radius: 2px;
+    outline: none;
+    border: 1px solid $gray;
+    cursor: pointer;
+
+    &:hover svg path {
+      fill: $acc;
+    }
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      pointer-events: none;
+
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  &.custom-arrow-left {
+    left: 2%;
+  }
+
+  &.custom-arrow-right {
+    right: 2%;
   }
 }

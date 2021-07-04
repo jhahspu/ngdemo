@@ -7,13 +7,15 @@ import { NgxGlideModule } from 'ngx-glide';
 import { SafeStylePipe } from './bgimage.pipe';
 import { RndComponent } from './components/rnd/rnd.component';
 import { DscvrComponent } from './components/dscvr/dscvr.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     TgmfComponent,
     SafeStylePipe,
     RndComponent,
-    DscvrComponent
+    DscvrComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,
