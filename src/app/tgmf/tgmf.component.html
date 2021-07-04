@@ -9,14 +9,17 @@
 
       <ngx-glide
         #ngxGlide
-        [perView]="perView" >
+        [perView]=6
+        [gap]=20
+        [rewind]="false"
+        [showBullets]="false"
+        [breakpoints]="{ '400': { perView: 1 }, '680': { perView: 2 }, '900': { perView: 3 }, '1180': { perView: 4 }, '134': { perView: 5 } }" >
 
         <div
-          *ngFor="let mvg of gMvs; let i = index;">
+          *ngFor="let mvg of gMvs">
 
             <div
-              class="slidee"
-              [ngClass]="{'two': slides === 10, 'four': slides === 5}" >
+              class="slidee" >
 
               <div
                 *ngFor="let mv of mvg"

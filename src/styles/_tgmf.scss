@@ -1,20 +1,16 @@
 .slidee {
   position: relative;
   display: grid;
-  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
 
-  &.two {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  &.four {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .mvs {border: 2px dashed crimson;
+  .mvs {
     display: flex;
     flex-direction: column;
     user-select: none;
+    color: $white;
+    background-color: $gray;
+    border-radius: 3px;
+    overflow: hidden;
 
     .poster {
       background-repeat: no-repeat;
@@ -28,13 +24,12 @@
       }
     }
 
-    .details { border: 2px dashed purple;
+    .details {
       padding: .75rem .5rem;
       display: flex;
       flex-direction: column;
-      // overflow-x: hidden;
 
-      span { border: 2px dashed blue;
+      span {
         display: inline-block;
         height: 4rem;
         font-size: 1.2rem;
