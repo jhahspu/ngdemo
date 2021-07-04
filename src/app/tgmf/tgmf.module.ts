@@ -5,11 +5,15 @@ import { TgmfService } from './tgmf.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxGlideModule } from 'ngx-glide';
 import { SafeStylePipe } from './bgimage.pipe';
+import { RndComponent } from './components/rnd/rnd.component';
+import { DscvrComponent } from './components/dscvr/dscvr.component';
 
 @NgModule({
   declarations: [
     TgmfComponent,
-    SafeStylePipe
+    SafeStylePipe,
+    RndComponent,
+    DscvrComponent
   ],
   imports: [
     CommonModule,

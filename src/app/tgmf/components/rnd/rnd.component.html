@@ -1,0 +1,48 @@
+<div class="tgmovies">
+
+  <h2>Random</h2>
+
+  <ng-container *ngIf="rndTitles && rndTitles.length">
+
+    <ngx-glide
+      #ngxGlide
+      [perView]=3
+      [gap]=20
+      [rewind]="false"
+      [showBullets]="false"
+      [breakpoints]="{ '780': { perView: 1 }, '1080': { perView: 2 } }" >
+
+      <div
+        *ngFor="let mvg of gMvs">
+
+          <div
+            class="slidee" >
+
+            <div
+              *ngFor="let mv of mvg"
+              class="mvs" >
+
+                <div
+                  [style.backgroundImage]="'url(https://www.themoviedb.org/t/p/w300_and_h450_bestv2' + mv.poster_path + ')'"
+                  class="poster" >
+                    <img
+                      src="assets/placeholder.png"
+                      alt="placeholder" >
+                </div>
+
+                <div class="details">
+                  <span>
+                    {{mv.title | titlecase}}
+                  </span>
+                </div>
+            </div>
+
+          </div>
+
+      </div>
+
+    </ngx-glide>
+
+  </ng-container>
+
+</div>
