@@ -3,7 +3,11 @@ $white: #f6f7f9;
 $black: #282829;
 $gray: #323233;
 $light-gray: #d1d1d2;
+$bg-transp: rgba($color: $light-gray, $alpha: 0.7);
 
-$shadow-acc: 1px 1px 8px rgba(0, 0, 0, 0.78), 1px 1px 12px rgba(0, 0, 0, 0.58);
+$text-transparent: rgba(0, 0, 0, 0.4);
 
-$boxshadow: 2px 1px 4px rgba(0, 0, 0, 0.2);
+$shadow-acc: 1px 1px 8px 0 rgba(0, 0, 0, 0.78), 1px 1px 12px 0 rgba(0, 0, 0, 0.58);
+
+$boxshadow: -1px 1px 6px 0 rgba(0, 0, 0, 0.1), 2px 1px 4px 0 rgba(0, 0, 0, 0.2);
+

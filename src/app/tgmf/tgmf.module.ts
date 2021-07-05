@@ -8,6 +8,10 @@ import { SafeStylePipe } from './bgimage.pipe';
 import { RndComponent } from './components/rnd/rnd.component';
 import { DscvrComponent } from './components/dscvr/dscvr.component';
 import { CardComponent } from './components/card/card.component';
+import { RouterModule } from '@angular/router';
+import { MoreComponent } from './more/more.component';
+import { NgxStarsModule } from 'ngx-stars';
+import { YtPipe } from './yt.pipe';
 
 @NgModule({
   declarations: [
@@ -15,11 +19,15 @@ import { CardComponent } from './components/card/card.component';
     SafeStylePipe,
     RndComponent,
     DscvrComponent,
-    CardComponent
+    CardComponent,
+    MoreComponent,
+    YtPipe
   ],
   imports: [
     CommonModule,
     HttpClientModule,
+    RouterModule,
+    NgxStarsModule,
     NgxGlideModule
   ],
   providers: [

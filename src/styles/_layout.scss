@@ -18,13 +18,22 @@ section {
 }
 
 .btn {
+  display: inline-block;
   padding: .4rem .6rem;
-  background-color: $acc;
   color: $white;
+  background-color: $acc;
+  box-shadow: $boxshadow;
   border: none;
   outline: none;
+  transition: filter .2s ease-in-out;
 
   &:hover {
-    filter: brightness(.8);
+    filter: brightness(.7);
+  }
+
+  &-sm {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .2ch;
   }
 }
