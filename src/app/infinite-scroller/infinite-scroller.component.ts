@@ -5,9 +5,7 @@ import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-infinite-scroller',
-  templateUrl: './infinite-scroller.component.html',
-  styles: [
-  ]
+  templateUrl: './infinite-scroller.component.html'
 })
 export class InfiniteScrollerComponent implements AfterViewInit {
 

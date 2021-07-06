@@ -6,9 +6,7 @@ import { TgmfService } from '../../tgmf.service';
 
 @Component({
   selector: 'tgmf-dscvr',
-  templateUrl: './dscvr.component.html',
-  styles: [
-  ]
+  templateUrl: './dscvr.component.html'
 })
 export class DscvrComponent {
 
@@ -38,7 +36,7 @@ export class DscvrComponent {
       await this.tgmfService.getDiscover()
         .pipe(take(1))
         .subscribe(data => {
-          console.log(data.results)
+          // console.log(data.results)
             this.dscvrTitles = data.results;
             sessionStorage.setItem('dscvr', JSON.stringify(this.dscvrTitles));
             this.dMvs = this.createGroups(this.dscvrTitles, 10);

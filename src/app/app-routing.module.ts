@@ -11,25 +11,30 @@ import { TgmfComponent } from './tgmf/tgmf.component';
 const routes: Routes = [
   {
     path: "",
-    component: HomeComponent
+    component: HomeComponent,
+    data: {animation: 'HomePage'} 
   },
   {
     path: "md-parser",
-    component: MdParserComponent
+    component: MdParserComponent,
+    data: {animation: 'MDParser'} 
+
   },
   {
     path: "infinite-scroller",
-    component: InfiniteScrollerComponent
+    component: InfiniteScrollerComponent,
+    data: {animation: 'InfiniteScroller'} 
   },
   {
     path: "glide",
-    component: GlideComponent
+    component: GlideComponent,
+    data: {animation: 'Glide'} 
   },
   {
     path: "tgmf",
     children: [
-      { path: "", component: TgmfComponent },
-      { path: ":id", component: MoreComponent }
+      { path: "", component: TgmfComponent, data: {animation: 'TGMF'} },
+      { path: ":id", component: MoreComponent, data: {animation: 'TGMFDetail'} }
     ]
     
   },
